@@ -1,0 +1,62 @@
+﻿@*
+*@
+@{
+}
+@model Product
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İki Parçalı Sayfa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .parca {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .footer{
+            text-align: center;
+            padding: 50px;
+        }
+
+      
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="parca">
+            <p>@Model.Image</p>
+            <p>resim</p>
+        </div>
+        <div class="parca">
+            <h1>@Model.Name</h1>
+            <h3>Price : @Model.Price</h3>
+            <h3>Rating : @Model.Rating/5</h3>
+            <a class="btn btn-success">Add to Cart</a>
+        </div>
+    </div>
+    <div class="footer">
+        <h6>@Model.Details</h6>
+    </div>
+
+
+</body>
+</html>
+

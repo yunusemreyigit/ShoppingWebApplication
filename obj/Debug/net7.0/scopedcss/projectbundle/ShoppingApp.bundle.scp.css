@@ -1,0 +1,92 @@
+/* _content/ShoppingApp/Views/Shared/_CardView.cshtml.rz.scp.css */
+<style >
+body[b-0ts91n0wqr] {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card[b-0ts91n0wqr] {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .card img[b-0ts91n0wqr] {
+        width: 100%;
+        height: auto;
+    }
+
+.card-content[b-0ts91n0wqr] {
+    padding: 16px;
+}
+
+    .card-content h3[b-0ts91n0wqr] {
+        margin-top: 0;
+    }
+
+.button[b-0ts91n0wqr] {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+</style[b-0ts91n0wqr] >
+/* _content/ShoppingApp/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-3313gijnte] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-3313gijnte] {
+  color: #0077cc;
+}
+
+.btn-primary[b-3313gijnte] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-3313gijnte], .nav-pills .show > .nav-link[b-3313gijnte] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-3313gijnte] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-3313gijnte] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-3313gijnte] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-3313gijnte] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-3313gijnte] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
