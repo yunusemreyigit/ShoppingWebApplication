@@ -1,22 +1,52 @@
-html {
-  font-size: 14px;
+#cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Kartları yatay olarak ortala */
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  /* Kart içeriğini dikey olarak sırala */
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.card-info {
+  flex: 1;
+  /* .card-info'nun tüm boş alanı kaplamasını sağla */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* İçerikleri dikey olarak ortala */
 }
 
-body {
-  margin-bottom: 60px;
+.price {
+  font-weight: bold;
+  color: #e44d26;
+  margin-top: auto;
+  /* Fiyatı kartın en altına yerleştir */
+}
+
+button {
+  background-color: #e44d26;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }

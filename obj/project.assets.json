@@ -10677,11 +10677,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingApp.csproj",
+      "projectUniqueName": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\ShoppingApp.csproj",
       "projectName": "ShoppingApp",
-      "projectPath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingApp.csproj",
+      "projectPath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\ShoppingApp.csproj",
       "packagesPath": "C:\\Users\\emre\\.nuget\\packages\\",
-      "outputPath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\obj\\",
+      "outputPath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

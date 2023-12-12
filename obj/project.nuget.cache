@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1TLX18gEN9+fg5iG9zwClHnbrNsSGvx14yoMZNKb9CtAF+c+vFQ4meGhDFEpvylwD6Ms0Y5TCrKmG9IpyRAuLw==",
+  "dgSpecHash": "zYO9JyVijM3QJE6lIHT2T02Ee0R6vu5mdUIZbBUbybLCZ6yljuO3lzsuyAxastHemOG4UTnoIik2fLrB55itwQ==",
   "success": true,
-  "projectFilePath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingApp.csproj",
+  "projectFilePath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\ShoppingApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emre\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
