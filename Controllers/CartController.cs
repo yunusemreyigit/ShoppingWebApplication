@@ -11,19 +11,19 @@ public class CartController : Controller
     public CartController(Repository repository)
     {
         this.repository = repository;
-        cart = HttpContext.Session.Get<Cart>("Cart") == null ?
-        new Cart() : HttpContext.Session.Get<Cart>("Cart");
     }
 
     public void AddCart(int id)
     {
-
+        cart = HttpContext.Session.Get<Cart>("Cart") == null ?
+       new Cart() : HttpContext.Session.Get<Cart>("Cart");
         var product = repository.Products.Find(id);
         cart.Products.Add(product);
         HttpContext.Session.Set<Cart>("Cart", cart);
     }
     public void ExtractCart(int id)
     {
+        cart = HttpContext.Session.Get<Cart>("Cart");
         Product temp = new Product();
         temp.ProductId = id;
         cart.Products.Remove(temp);
@@ -32,7 +32,8 @@ public class CartController : Controller
     }
     public IActionResult DetailCart()
     {
-        ViewBag.cart = HttpContext.Session.Get<Cart>("Cart");
+        ViewBag.cart = HttpContext.Session.Get<Cart>("Cart") == null ? new Cart() :
+        HttpContext.Session.Get<Cart>("Cart");
         return View();
     }
 }
