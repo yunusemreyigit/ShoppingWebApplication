@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+
+
+            <h1 class="h1">Items</h1>
+            <table class="table">
+                <thead>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+
+                </thead>
+                @foreach (Product item in ViewBag.productList)
+                {
+                    <tr>
+                        <th scope="col">@item.ProductId</th>
+                        <th scope="col">@item.Name</th>
+                        <th scope="col"><a asp-controller="Product" asp-action="Delete" asp-route-id="@item.ProductId"
+                                class="btn btn-danger">Delete</a>
+                        </th>
+                    </tr>
+                }
+            </table>
+            <div>
+                <a class="btn btn-success" asp-controller="Product" asp-action="Add">Add Item</a>
+            </div>
+        </div>
+        <div class="column">
+            <h1>Category</h1>
+            <table class="table">
+                <thead>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">
+                    </th>
+                </thead>
+                @foreach (ProductType item in ViewBag.productTypeList)
+                {
+                    <tr>
+                        <th scope="col">@item.Id</th>
+                        <th scope="col">@item.Name</th>
+                        <th scope="col"><a asp-controller="ProductType" asp-action="Delete" asp-route-id="@item.Id"
+                                class="btn btn-danger">Delete</a>
+                        </th>
+                    </tr>
+                }
+            </table>
+            <div>
+                <a class="btn btn-success" asp-controller="ProductType" asp-action="Add">Add Category</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using ShoppingApp.Data;
 using ShoppingApp.Models;
 
@@ -56,7 +55,7 @@ namespace ShoppingApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            Product item = _repository.Products.Find(id);
+            var item = _repository.Products.Find(id);
             if (item == null)
             {
                 return NotFound();

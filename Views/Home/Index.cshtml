@@ -1,70 +1,48 @@
-﻿@* <div>
-<div class="align-content-start">
+﻿<div id="cardList">
+    @foreach (var product in ViewBag.productList)
+    {
+        <div class="card">
+            @if (@product.Image != null)
+            {
+                string img64 = Convert.ToBase64String(@product.Image);
+                string img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
 
-<table class="table table-bordered text-center" cellpadding="5">
-<thead>
-<tr class="bg-black bg-opacity-50">
-<th class="text-capitalize text-white">Name</th>
-<th class="text-capitalize text-white">Price</th>
-<th class="text-capitalize text-white">Image</th>
-<th class="text-capitalize text-white">Rating</th>
-<th class="text-capitalize text-white" colspan="2">More</th>
-</tr>
-</thead>
-<tbody>
-@foreach (Product product in ViewBag.productList)
-{
-string img64Url = "";
-@if (@product.Image != null)
-{
-string img64 = Convert.ToBase64String(@product.Image);
-img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
-}
-
-
-<tr>
-<td class="align-content-center">@product.Name</td>
-<td>@product.Price</td>
-<td><img src="@img64Url"></td>
-<td>@product.Rating</td>
-<td><button class="btn btn-outline-success">Add to
-Cart</button></td>
-<td><a class="btn btn-primary" href="/product/details/@product.ProductId">Details</a></td>
-</tr>
-}
-</tbody>
-</table>
-</div>
-<div>
-<a href="/product/add" class="btn btn-outline-primary">Add Item</a>
-</div>
-</div> *@
-
-
-<!-- Views/Home/Index.cshtml -->
-<button onclick="addCard()">Add Card</button>
-
-<div id="cardList"></div>
-@*
-@section scripts {
-<script type="text/javascript" src="~/js/site.js"></script>
-} *@
-<script type="text/javascript">
-    function addCard() {
-        const cardList = document.getElementById('cardList');
-        const card = document.createElement('div');
-        card.className = 'card';
-
-        card.innerHTML = `
-        <img src="https://via.placeholder.com/150" alt="Product Image">
-        <div class="card-info">
-            <h3>Product ${++cardCount}</h3>
-            <p>Description of product ${cardCount}.</p>
-            <p class="price">$19.99</p>
-            <button onclick="addToCart(${cardCount})">Add to Cart</button>
+                <img src="@img64Url" alt="Product Image">
+            }
+            <div class="card-info">
+                <h3>@product.Name</h3>
+                <p>
+                <h5>@product.Details</h5>
+                </p>
+                <p class="price">@product.Price.ToString("C")</p>
+                <p class="price">@product.Rating</p>
+                <a class="btn btn-success" href="/product/details/@product.ProductId">Go To
+                    Product</a>
+                <br>
+                <button onclick=" getCart(@product.ProductId)">Add to Cart</button>
+            </div>
         </div>
-    `;
+    }
+</div>
 
-        cardList.appendChild(card);
+<script type="text/javascript">
+    function getCart(id) {
+        $.post("@Url.Action("AddCart", "Cart")", { id: id }, function () {
+            alert("Added to Cart");
+        });
+    }
+    function goToProduct(id) {
+        $.post("@Url.Action("Details", "Product")", { id: id }, function () {
+        });
     }
 </script>
+
+<div class="cart-container" id="cartContainer">
+    <h3 class="cart-title">Shopping Cart</h3>
+    <div id="cartItems"></div>
+</div>
+
+
+@section scripts {
+    <script type="text/javascript" src="~/js/site.js"></script>
+}

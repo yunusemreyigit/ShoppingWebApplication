@@ -21,7 +21,7 @@ public class CartController : Controller
         cart.Products.Add(product);
         HttpContext.Session.Set<Cart>("Cart", cart);
     }
-    public void ExtractCart(int id)
+    public void RemoveFromCart(int id)
     {
         cart = HttpContext.Session.Get<Cart>("Cart");
         Product temp = new Product();

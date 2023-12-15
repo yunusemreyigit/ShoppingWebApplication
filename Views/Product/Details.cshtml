@@ -5,6 +5,7 @@
 @model Product
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,21 +30,25 @@
             padding: 20px;
         }
 
-        .footer{
+        .footer {
             text-align: center;
             padding: 50px;
         }
-
-      
     </style>
 </head>
+
 <body>
 
 
     <div class="container">
         <div class="parca">
-            <p>@Model.Image</p>
-            <p>resim</p>
+            @if (@Model.Image != null)
+            {
+                string img64 = Convert.ToBase64String(@Model.Image);
+                string img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
+
+                <img src="@img64Url" alt="Product Image">
+            }
         </div>
         <div class="parca">
             <h1>@Model.Name</h1>
@@ -58,5 +63,5 @@
 
 
 </body>
-</html>
 
+</html>

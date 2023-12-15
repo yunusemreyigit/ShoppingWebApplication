@@ -31,6 +31,7 @@ namespace ShoppingApp.Controllers
             // return Redirect(preURL);
             return Redirect("/home/admin");
         }
+        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var item = _repository.Types.Find(id);
