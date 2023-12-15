@@ -22,6 +22,20 @@ namespace ShoppingApp.Controllers
             ViewBag.productList = _repository.Products.ToList();
             return View();
         }
+        public IActionResult Admin()
+        {
+            TempData["preURL"] = Request.Headers["Referer"];
+            ViewBag.productList = _repository.Products.ToList();
+            ViewBag.productTypeList = _repository.Types.ToList();
+            return View();
+        }
+        public IActionResult GoBack()
+        {
+            if (TempData["preURL"] == null) return View(Index);
+
+            var preURL = TempData["preURL"].ToString();
+            return Redirect(preURL);
+        }
 
         public IActionResult Privacy()
         {

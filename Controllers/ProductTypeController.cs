@@ -24,7 +24,21 @@ namespace ShoppingApp.Controllers
         {
             _repository.Types.Add(type);
             await _repository.SaveChangesAsync();
-            return Redirect("/product/add");
+
+            // if (TempData["preURL"] == null) return Redirect("/");
+
+            // var preURL = TempData["preURL"].ToString();
+            // return Redirect(preURL);
+            return Redirect("/home/admin");
+        }
+        public async Task<IActionResult> Delete(int id)
+        {
+            var item = _repository.Types.Find(id);
+            if (item == null) return NotFound();
+
+            _repository.Types.Remove(item);
+            await _repository.SaveChangesAsync();
+            return Redirect("/home/admin");
         }
     }
 }

@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/Cart/DetailCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxEZXRhaWxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/Home/Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

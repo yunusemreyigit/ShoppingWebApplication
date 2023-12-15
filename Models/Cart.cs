@@ -1,7 +1,9 @@
-﻿namespace ShoppingApp.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ShoppingApp.Models
 {
     public class Cart
     {
-        public List<int> Products { get; set; }
+        public List<Product> Products = new List<Product>();
     }
 }

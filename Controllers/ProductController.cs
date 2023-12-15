@@ -9,12 +9,10 @@ namespace ShoppingApp.Controllers
     {
         private readonly Repository _repository;
         private readonly IWebHostEnvironment _environment;
-        List<int> productsCart;
         public ProductController(Repository repository, IWebHostEnvironment enviroment)
         {
             _repository = repository;
             _environment = enviroment;
-            productsCart = new List<int>();
         }
         public IActionResult Home()
         {
@@ -43,7 +41,7 @@ namespace ShoppingApp.Controllers
 
             _repository.Products.Add(product);
             await _repository.SaveChangesAsync();
-            return Redirect("/Home/Index");
+            return Redirect("/home/admin");
         }
         [HttpGet]
         public IActionResult Details(int id)
@@ -65,7 +63,7 @@ namespace ShoppingApp.Controllers
             }
             _repository.Products.Remove(item);
             await _repository.SaveChangesAsync();
-            return View();
+            return Redirect("/home/admin");
         }
         [HttpGet]
         public IActionResult Update(int id)
@@ -83,7 +81,5 @@ namespace ShoppingApp.Controllers
             _repository.SaveChanges();
             return View();
         }
-
-
     }
 }

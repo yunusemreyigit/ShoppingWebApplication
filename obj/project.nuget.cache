@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zYO9JyVijM3QJE6lIHT2T02Ee0R6vu5mdUIZbBUbybLCZ6yljuO3lzsuyAxastHemOG4UTnoIik2fLrB55itwQ==",
+  "dgSpecHash": "OoXH48ftptg8cwGVgcGZoQp7+6zEUNjDRUkC1ZJsglUudK9r2dbFfgtduxE+D26uU4Lk3/H/sr4udRhNiA9EQw==",
   "success": true,
   "projectFilePath": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\ShoppingApp.csproj",
   "expectedPackageFiles": [
@@ -104,7 +104,7 @@
     "C:\\Users\\emre\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\emre\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\emre\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\nuget.common\\6.6.1\\nuget.common.6.6.1.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\nuget.configuration\\6.6.1\\nuget.configuration.6.6.1.nupkg.sha512",
     "C:\\Users\\emre\\.nuget\\packages\\nuget.dependencyresolver.core\\6.6.1\\nuget.dependencyresolver.core.6.6.1.nupkg.sha512",
