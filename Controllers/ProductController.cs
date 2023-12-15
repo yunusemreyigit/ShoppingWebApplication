@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ShoppingApp.Data;
 using ShoppingApp.Models;
 
@@ -52,10 +53,15 @@ namespace ShoppingApp.Controllers
             }
             return Redirect("/Home/Index");
         }
-        [HttpPost]
+
         public async Task<IActionResult> Delete(int id)
         {
-            var item = _repository.Products.Find(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var item = await _repository.Products
+                .FirstOrDefaultAsync(m => m.ProductId == id);
             if (item == null)
             {
                 return NotFound();
@@ -63,6 +69,11 @@ namespace ShoppingApp.Controllers
             _repository.Products.Remove(item);
             await _repository.SaveChangesAsync();
             return Redirect("/home/admin");
+
+
+
+
+
         }
         [HttpGet]
         public IActionResult Update(int id)
