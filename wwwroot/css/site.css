@@ -1,137 +1,134 @@
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f7f7f7;
-  margin: 0;
-  padding: 0;
-  color: #333;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
 h2 {
-  color: #e44d26;
+    color: #e44d26;
 }
 
 #cardList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  margin: 15px;
-  padding: 20px;
-  width: calc(25% - 30px);
-  /* Dört sütunlu sıralama için genişliği ayarla */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin: 15px;
+    padding: 20px;
+    width: calc(25% - 30px); /* Dört sütunlu sıralama için genişliği ayarla */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
+    .card:hover {
+        transform: scale(1.05);
+    }
 
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover img {
+        transform: scale(1.1); /* Hover durumunda resmi büyüt */
+    }
 
 .card-info {
-  flex: 1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 h3 {
-  color: #333;
-  margin-bottom: 10px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .price {
-  font-weight: bold;
-  color: #e44d26;
-  margin-top: auto;
-  font-size: 18px;
+    font-weight: bold;
+    color: #e44d26;
+    font-size: 18px;
 }
 
 button {
-  background-color: #e44d26;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+    background-color: #e44d26;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
-  background-color: #333;
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Opsiyonel: Butonlar arasında bir boşluk ekler */
 }
 
-/* Alışveriş sepeti stilini ekleyelim */
-.cart-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 20px;
-  background-color: #fff;
-  border-left: 1px solid #ddd;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+.btn {
+    background-color: #e44d26;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.cart-title {
-  font-size: 20px;
-  font-weight: bold;
-  color: #e44d26;
-  margin-bottom: 15px;
+    .btn:hover {
+        background-color: #333;
+        transform: scale(1.1);
+        color: #fff; /* Hover durumunda metin rengini beyaz olarak koruyoruz */
+    }
+
+/* site.css veya başka bir stil dosyasında */
+.navbar-nav .nav-item .nav-link {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333; /* Yazı rengini istediğiniz renk ile değiştirebilirsiniz */
+    text-decoration: none;
+    padding: 12px 18px; /* Yazı içeriğine biraz daha boşluk ekler */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
+    .navbar-nav .nav-item .nav-link:hover {
+        color: #e44d26; /* Hover durumunda yazı rengini istediğiniz renk ile değiştirebilirsiniz */
+        background-color: #f8f8f8; /* Hover durumunda arkaplan rengini istediğiniz renk ile değiştirebilirsiniz */
+        border-radius: 8px; /* Köşeleri yuvarlar */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
+        transform: translateY(-2px); /* Yüksekliği biraz yükseltir */
+    }
 
-.cart-item img {
-  max-width: 60px;
-  border-radius: 6px;
-  margin-right: 10px;
-}
+    .navbar-nav .nav-item .nav-link.home {
+        color: #e44d26; /* Home linkinin rengini istediğiniz renk ile değiştirebilirsiniz */
+        border-bottom: 2px solid transparent; /* Alt çizgiyi kaldırır */
+    }
 
-.cart-item-info {
-  flex: 1;
-}
+    .navbar-nav .nav-item .nav-link.privacy {
+        color: #e44d26; /* Privacy linkinin rengini istediğiniz renk ile değiştirebilirsiniz */
+        border-bottom: 2px solid transparent; /* Alt çizgiyi kaldırır */
+    }
 
-.cart-item h4 {
-  margin: 0;
-  color: #333;
-}
-
-.cart-item p {
-  margin: 0;
-  color: #777;
-}
-
-.cart-item button {
-  background-color: #333;
-  color: #fff;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.cart-item button:hover {
-  background-color: #555;
-}
+        .navbar-nav .nav-item .nav-link.home:hover,
+        .navbar-nav .nav-item .nav-link.privacy:hover {
+            background-color: transparent; /* Hover durumunda arkaplan rengini kaldırır */
+            box-shadow: none; /* Hover durumunda gölgeyi kaldırır */
+            border-bottom: 2px solid #e44d26; /* Alt çizgi ekler */
+        }
