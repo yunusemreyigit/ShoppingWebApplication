@@ -9,6 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İki Parçalı Sayfa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,13 +41,13 @@
 
 
     <div class="container">
-        <div class="parca col-md-4">
+        <div class="parca">
             @if (@Model.Image != null)
             {
                 string img64 = Convert.ToBase64String(@Model.Image);
                 string img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
 
-                <img src="@img64Url" alt="Product Image" class="img-fluid">
+                <img src="@img64Url" alt="Product Image">
             }
         </div>
         <div class="parca">
@@ -56,7 +57,7 @@
             <a class="btn btn-success">Add to Cart</a>
         </div>
     </div>
-    <div class="footer border">
+    <div class="footer">
         <h6>@Model.Details</h6>
     </div>
 

@@ -1,4 +1,79 @@
-﻿﻿@{
+﻿@* @{
+    List<string> categoryList = new List<string> { "Book", "Watch" };
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShoppingApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ShoppingApp.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ShoppingApp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home"
+                                asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-item text-center">
+                    <h1>Shopping App</h1>
+                </div>
+                <div>
+                    <select>
+                        @foreach (String item in categoryList)
+                        {
+                            <option>@item</option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted container-fluid">
+        <div class="container">
+            &copy; 2023 - ShoppingApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        <div>
+            <a style="float:right; " class="btn btn-outline-dark" asp-controller="Home" asp-action="Admin">Admin</a>
+        </div>
+        <div>
+            <a style="float:right; " class="btn btn-outline-primary" asp-controller="Cart"
+                asp-action="DetailCart">Cart</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html> *@
+
+﻿@{
     List<string> categoryList = new List<string> { "Book", "Watch" };
 }
 <!DOCTYPE html>
@@ -10,6 +85,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ShoppingApp.styles.css" asp-append-version="true" />
+
 </head>
 <body>
     <header>
@@ -28,31 +104,34 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <li class="nav-item">
-                              <a  class="nav-link text-dark" asp-controller="Cart"
-                asp-action="DetailCart">Cart</a>
+                        <li class="nav-item" style="display: flex; align-items: center; margin-right: 15px;">
+                            <a class="nav-link text-dark" asp-controller="Cart" asp-action="DetailCart">
+                                <img src="/images/shopping-cart-228.svg" alt="Shopping Cart" style="width: 20px; height: 20px; margin-right: 5px">
+                                Cart
+                            </a>
                         </li>
-                        <li class="nav-item">
-                              <a  class="nav-link text-dark" asp-controller="Home"
-                asp-action="Admin">Admin</a>
-                        </li>
+
+
+
+
                     </ul>
-          
+
                 </div>
-                  
-                <div class ="nav-item text-center">
-                    <h1>Shopping App</h1>
-                </div>
+
+
+
+
                 @*<div class="align-content-end">
-                    <button class="btn btn-dark btn-outline-success text-white">Login/Register</button>
-                </div>*@
+            <button class="btn btn-dark btn-outline-success text-white">Login/Register</button>
+        </div>*@
                 <div>
-                <select>
-                    @foreach(String item in categoryList)
+                    <select>
+                        @foreach(String item in categoryList)
                     {
-                    <option>@item</option>        
+                        <option>@item</option>
+
                     }
-                </select>
+                    </select>
                 </div>
             </div>
         </nav>

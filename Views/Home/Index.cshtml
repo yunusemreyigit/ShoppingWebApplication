@@ -1,32 +1,29 @@
 ﻿<div id="cardList">
     @foreach (var product in ViewBag.productList)
     {
-        <div class="card">
-            @if (@product.Image != null)
-            {
-                string img64 = Convert.ToBase64String(@product.Image);
-                string img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
+    <div class="card">
+        @if (@product.Image != null)
+    {
+            string img64 = Convert.ToBase64String(@product.Image);
+            string img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
 
-                <img src="@img64Url" alt="@product.Name">
-            }
-            else
-            {
-
-            }
-            <img class="img-thumbnail" src="\wwwroot\no-product-image.png" alt="No Image" />
-            <div class="card-info">
-                <h3>@product.Name</h3>
-                <p>
+        <img src="@img64Url" alt="Product Image">
+    }
+        <div class="card-info">
+            <h3>@product.Name</h3>
+            <p>
                 <h5>@product.Details</h5>
-                </p>
-                <p class="price">@product.Price.ToString("C")</p>
-                <p class="price">@product.Rating</p>
-                <a class="btn" href="/product/details/@product.ProductId">Go To
-                    Product</a>
-                <br>
-                <button class="btn-success" onclick=" getCart(@product.ProductId)">Add to Cart</button>
+            </p>
+            <p class="price">@product.Price.ToString("C")</p>
+            <p class="price">@product.Rating</p>
+
+            <div class="button-container">
+                <a class="btn" href="/product/details/@product.ProductId">Go To Product</a>
+                <button class="btn" onclick="getCart(@product.ProductId)">Add to Cart</button>
             </div>
+
         </div>
+    </div>
     }
 </div>
 
@@ -41,6 +38,10 @@
         });
     }
 </script>
+
+
+
+
 @section scripts {
     <script type="text/javascript" src="~/js/site.js"></script>
 }
