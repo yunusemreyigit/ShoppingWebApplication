@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IANocxm99V4eimKruK3exWzaage3LfcdH3oDGe7yFLs=",
+  "Hash": "Q84PD6el/QJ9XdADR50qCMHrP3ZRpS9WShvyYmnpvMM=",
   "Source": "ShoppingApp",
   "BasePath": "_content/ShoppingApp",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\No-image.png",
+      "SourceId": "ShoppingApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\",
+      "BasePath": "_content/ShoppingApp",
+      "RelativePath": "No-image.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\No-image.png"
     }
   ]
 }

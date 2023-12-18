@@ -1,5 +1,6 @@
 ﻿@model Product
-<form method="post" action="/Product/Add" enctype="multipart/form-data">
+<form method="post" action="/Product/Update" enctype="multipart/form-data">
+    <input type="hidden" asp-for="ProductId" />
     <div class="mb-3">
         <label asp-for="Name" class="form-label">Product Name</label>
         <input asp-for="Name" class="form-control" />
@@ -22,7 +23,6 @@
     <div class="mb-3">
         <label asp-for="Image" class="form-label">Image</label>
         <input asp-for="Image" class="form-control" type="file" />
-        <span asp-validation-for="Image" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label class="form-label" asp-for="ProductTypeId">Type</label>
@@ -35,7 +35,7 @@
         <a href="/producttype/add" class="btn btn-outline-secondary">Add Product Type</a>
     </div>
     <div class="align-content-center">
-        <button type="submit" class="btn btn-success">Save Item</button>
+        <button type="submit" class="btn btn-success">Update Item</button>
     </div>
 </form>
 

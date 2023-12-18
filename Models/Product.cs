@@ -18,6 +18,6 @@ namespace ShoppingApp.Models
         public byte[]? Image { get; set; }
         public int? Rating { get; set; }
         public int ProductTypeId { get; set; }
-        public virtual ProductType ProductType { get; set; }
+        public virtual ProductType? ProductType { get; set; }
     }
 }

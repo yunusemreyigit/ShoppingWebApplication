@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\ShoppingApp.bundle.scp.css"
     },
     {
+      "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\No-image.png",
+      "PackagePath": "staticwebassets\\No-image.png"
+    },
+    {
       "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

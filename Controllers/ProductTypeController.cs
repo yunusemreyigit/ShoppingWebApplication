@@ -22,14 +22,14 @@ namespace ShoppingApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Add(ProductType type)
         {
-            _repository.Types.Add(type);
-            await _repository.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                _repository.Types.Add(type);
+                await _repository.SaveChangesAsync();
+                return Redirect("/home/admin");
 
-            // if (TempData["preURL"] == null) return Redirect("/");
-
-            // var preURL = TempData["preURL"].ToString();
-            // return Redirect(preURL);
-            return Redirect("/home/admin");
+            }
+            return View(type);
         }
         public async Task<IActionResult> Delete(int id)
         {
