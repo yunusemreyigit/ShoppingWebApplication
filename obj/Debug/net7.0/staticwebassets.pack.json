@@ -5,16 +5,20 @@
       "PackagePath": "staticwebassets\\ShoppingApp.bundle.scp.css"
     },
     {
-      "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\No-image.png",
-      "PackagePath": "staticwebassets\\No-image.png"
-    },
-    {
       "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\images\\no-product-image.png",
+      "PackagePath": "staticwebassets\\images\\no-product-image.png"
+    },
+    {
+      "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\images\\shopping-cart-228.svg",
+      "PackagePath": "staticwebassets\\images\\shopping-cart-228.svg"
     },
     {
       "Id": "D:\\Ders Notları\\Web Programming\\Project\\ShoppingApp\\ShoppingWepApplication\\wwwroot\\index.html",

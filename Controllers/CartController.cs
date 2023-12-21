@@ -1,3 +1,4 @@
+using System.IO.Compression;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingApp.Data;
 using ShoppingApp.Extensions;
@@ -21,14 +22,13 @@ public class CartController : Controller
         cart.Products.Add(product);
         HttpContext.Session.Set<Cart>("Cart", cart);
     }
-    public void RemoveFromCart(int id)
+    [HttpGet]
+    public IActionResult RemoveFromCart(int id)
     {
         cart = HttpContext.Session.Get<Cart>("Cart");
-        Product temp = new Product();
-        temp.ProductId = id;
-        cart.Products.Remove(temp);
+        cart.Products.Remove(cart.Products.Find(x => x.ProductId == id));
         HttpContext.Session.Set<Cart>("Cart", cart);
-        Console.WriteLine("Extracted :" + id);
+        return RedirectToAction("DetailCart");
     }
     public IActionResult DetailCart()
     {

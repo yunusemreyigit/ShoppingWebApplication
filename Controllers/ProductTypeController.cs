@@ -40,5 +40,10 @@ namespace ShoppingApp.Controllers
             await _repository.SaveChangesAsync();
             return Redirect("/home/admin");
         }
+
+        public ActionResult CategoryList()
+        {
+            return View(_repository.Types);
+        }
     }
 }

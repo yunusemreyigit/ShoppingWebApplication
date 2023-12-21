@@ -54,7 +54,7 @@
             <h1>@Model.Name</h1>
             <h3>Price : @Model.Price</h3>
             <h3>Rating : @Model.Rating/5</h3>
-            <a class="btn btn-success">Add to Cart</a>
+            <a class="btn btn-success" onclick="getCart(@Model.ProductId)">Add to Cart</a>
         </div>
     </div>
     <div class="footer">
@@ -65,3 +65,11 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    function getCart(id) {
+        $.post("@Url.Action("AddCart", "Cart")", { id: id }, function () {
+            alert("Added to Cart");
+        });
+    }
+</script>

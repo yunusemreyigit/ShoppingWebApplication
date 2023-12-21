@@ -19,10 +19,12 @@
                 @foreach (Product item in ViewBag.cart.Products)
                 {
                     <tr>
-                        @* <th scope="col">@item.ProductId</th> *@
                         <th scope="col">@item.Name</th>
-                        @* <th scope="col"><a asp-controller="Cart" asp-action="ExtractCart" asp-route-id="@item.ProductId"
-                    class="btn btn-danger">Delete</a>
+                        <th scope="col"><a asp-action="RemoveFromCart" asp-controller="Cart" asp-route-id="@item.ProductId"
+                                class="btn btn-danger">Delete</a>
+                        </th>
+                        @* <th scope="col"><button onclick="extractProduct(@item.ProductId)"
+                    class=" btn-danger">Delete</button>
                     </th> *@
                     </tr>
                 }
@@ -34,3 +36,12 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    function extractProduct(id) {
+        $.post("@Url.Action("RemoveFromCart", "Cart")", { id: id }, function () {
+            alert("Deleted Product");
+        });
+    }
+
+</script>
