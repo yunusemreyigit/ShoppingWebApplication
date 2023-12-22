@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+</head>
+
 <body>
     <div class="row">
         <div class="column">
@@ -9,10 +12,12 @@
             <h1 class="h1">Items</h1>
             <table class="table">
                 <thead>
-                    <th scope="col">Id</th>
-                    <th scope="col">Name</th>
-
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                    </tr>
                 </thead>
+
                 @foreach (Product item in ViewBag.cart.Products)
                 {
                     <tr>
@@ -20,6 +25,9 @@
                         <th scope="col"><a asp-action="RemoveFromCart" asp-controller="Cart" asp-route-id="@item.ProductId"
                                 class="btn btn-danger">Delete</a>
                         </th>
+                        @* <th scope="col"><button onclick="extractProduct(@item.ProductId)"
+                    class=" btn-danger">Delete</button>
+                    </th> *@
                     </tr>
                 }
             </table>
@@ -30,3 +38,12 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+    function extractProduct(id) {
+        $.post("@Url.Action("RemoveFromCart", "Cart")", { id: id }, function () {
+            alert("Deleted Product");
+        });
+    }
+
+</script>

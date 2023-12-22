@@ -12,20 +12,20 @@
     else{
         <img src="\images\no-product-image.png" alt="No Image">
     }
-        <div class="card-info">
-            <h3>@product.Name</h3>
-            <p>
-                <h5>@product.Details</h5>
-            </p>
-            <p class="price">@product.Price.ToString("C")</p>
-            <p class="price">@product.Rating</p>
+    <div class="card-info">
+        <h3>@product.Name</h3>
+        <p>
+            <h5>@product.Details</h5>
+        </p>
+        <p class="price">@product.Price.ToString("C")</p>
+        <p class="price">@product.Rating</p>
 
-            <div class="button-container">
-                <a class="btn" asp-controller="Product" asp-action="Details" asp-route-id="@product.ProductId">Go To Product</a>
-                <button class="btn" onclick="getCart(@product.ProductId)">Add to Cart</button>
-            </div>
-
+        <div class="button-container">
+            <a class="go-to-product" href="/product/details/@product.ProductId">Go to Product</a>
+            <button class="add-to-cart" onclick="getCart(@product.ProductId)">Add to Cart</button>
         </div>
+
+    </div>
     </div>
     }
 </div>
@@ -34,6 +34,10 @@
     function getCart(id) {
         $.post("@Url.Action("AddCart", "Cart")", { id: id }, function () {
             alert("Added to Cart");
+        });
+    }
+    function goToProduct(id) {
+        $.post("@Url.Action("Details", "Product")", { id: id }, function () {
         });
     }
 </script>
