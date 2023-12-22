@@ -22,7 +22,7 @@ h2 {
     border-radius: 12px;
     margin: 15px;
     padding: 20px;
-    width: calc(25% - 30px); /* Dört sütunlu sıralama için genişliği ayarla */
+    width: calc(25% - 30px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@ h2 {
     }
 
     .card:hover img {
-        transform: scale(1.1); /* Hover durumunda resmi büyüt */
+        transform: scale(1.1);
     }
 
 .card-info {
@@ -66,69 +66,54 @@ h3 {
     font-size: 18px;
 }
 
-button {
-    background-color: #e44d26;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
 .button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px; /* Opsiyonel: Butonlar arasında bir boşluk ekler */
+    margin-top: 10px;
 }
 
-.btn {
-    background-color: #e44d26;
-    color: #fff;
+.add-to-cart, .go-to-product {
     padding: 12px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-decoration: none;
 }
 
-    .btn:hover {
-        background-color: #333;
+.add-to-cart {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.go-to-product {
+    background-color: #e44d26;
+    color: #fff;
+}
+
+    .add-to-cart:hover, .go-to-product:hover {
         transform: scale(1.1);
-        color: #fff; /* Hover durumunda metin rengini beyaz olarak koruyoruz */
+        color: #fff;
     }
 
-/* site.css veya başka bir stil dosyasında */
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+
 .navbar-nav .nav-item .nav-link {
     font-weight: bold;
     font-size: 18px;
-    color: #333; /* Yazı rengini istediğiniz renk ile değiştirebilirsiniz */
+    color: #333;
     text-decoration: none;
-    padding: 12px 18px; /* Yazı içeriğine biraz daha boşluk ekler */
+    padding: 12px 18px;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
     .navbar-nav .nav-item .nav-link:hover {
-        color: #e44d26; /* Hover durumunda yazı rengini istediğiniz renk ile değiştirebilirsiniz */
-        background-color: #f8f8f8; /* Hover durumunda arkaplan rengini istediğiniz renk ile değiştirebilirsiniz */
-        border-radius: 8px; /* Köşeleri yuvarlar */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
-        transform: translateY(-2px); /* Yüksekliği biraz yükseltir */
+        color: #e44d26;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
     }
-
-    .navbar-nav .nav-item .nav-link.home {
-        color: #e44d26; /* Home linkinin rengini istediğiniz renk ile değiştirebilirsiniz */
-        border-bottom: 2px solid transparent; /* Alt çizgiyi kaldırır */
-    }
-
-    .navbar-nav .nav-item .nav-link.privacy {
-        color: #e44d26; /* Privacy linkinin rengini istediğiniz renk ile değiştirebilirsiniz */
-        border-bottom: 2px solid transparent; /* Alt çizgiyi kaldırır */
-    }
-
-        .navbar-nav .nav-item .nav-link.home:hover,
-        .navbar-nav .nav-item .nav-link.privacy:hover {
-            background-color: transparent; /* Hover durumunda arkaplan rengini kaldırır */
-            box-shadow: none; /* Hover durumunda gölgeyi kaldırır */
-            border-bottom: 2px solid #e44d26; /* Alt çizgi ekler */
-        }
