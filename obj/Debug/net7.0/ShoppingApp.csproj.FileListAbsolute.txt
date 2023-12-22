@@ -506,7 +506,6 @@ D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\
 D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\staticwebassets.pack.json
 D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\staticwebassets.build.json
 D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\staticwebassets.development.json
-D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\scopedcss\Views\Shared\_CardView.cshtml.rz.scp.css
 D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\scopedcss\bundle\ShoppingApp.styles.css
 D:\Ders Notları\Web Programming\Project\ShoppingApp\ShoppingWepApplication\obj\Debug\net7.0\scopedcss\projectbundle\ShoppingApp.bundle.scp.css

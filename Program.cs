@@ -32,9 +32,9 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-/*app.MapControllerRoute(
-    "ItemAdd",
-    "{controller=Product}/{action=Add}");*/
+// app.MapControllerRoute(
+//    name : "ItemAdd",
+//     pattern : "{controller}/{action}/{id}");
 
 app.MapControllerRoute(
     name: "default",

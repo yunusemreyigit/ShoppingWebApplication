@@ -28,10 +28,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/ProductType/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -67,10 +63,6 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/Shared/_CardView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJkVmlldy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = b-0ts91n0wqr
 
 [D:/Ders Notları/Web Programming/Project/ShoppingApp/ShoppingWepApplication/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

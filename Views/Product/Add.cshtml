@@ -3,14 +3,16 @@
 }
 @model Product
 <form method="post" action="/Product/Add" enctype="multipart/form-data">
-    <div asp-validation-summary="All"></div>
     <div class="mb-3">
         <label asp-for="Name" class="form-label">Product Name</label>
         <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label asp-for="Price" class="form-label">Price</label>
         <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+
     </div>
     <div class="mb-3">
         <label asp-for="Color" class="form-label">Product Color</label>
@@ -19,6 +21,8 @@
     <div class="mb-3">
         <label asp-for="Details" class="form-label">Details</label>
         <input asp-for="Details" class="form-control" />
+        <span asp-validation-for="Details" class="text-danger"></span>
+
     </div>
     <div class="mb-3">
         <label asp-for="Image" class="form-label">Image</label>

@@ -1,15 +1,10 @@
-﻿@*
-*@
-@{
-}
-@model Product
+﻿@model Product
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İki Parçalı Sayfa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,6 +43,10 @@
                 string img64Url = string.Format("data:image/" + "png" + ";base64,{0}", img64);
 
                 <img src="@img64Url" alt="Product Image">
+            }
+            else
+            {
+                <img src="\images\no-product-image.png" alt="No Image">
             }
         </div>
         <div class="parca">
