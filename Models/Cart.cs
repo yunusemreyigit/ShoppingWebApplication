@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace ShoppingApp.Models
+﻿namespace ShoppingApp.Models
 {
     public class Cart
     {

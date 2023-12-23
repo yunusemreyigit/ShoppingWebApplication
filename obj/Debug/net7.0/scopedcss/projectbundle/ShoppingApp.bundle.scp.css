@@ -1,5 +1,4 @@
 /* _content/ShoppingApp/Views/Shared/_Layout.cshtml.rz.scp.css */
-/* Ana Başlık Stili */
 header h1[b-3313gijnte] {
     text-align: center;
     color: #e44d26;
@@ -7,7 +6,6 @@ header h1[b-3313gijnte] {
     margin-bottom: 20px;
 }
 
-/* Navbar Stili */
 .navbar[b-3313gijnte] {
     background-color: #333;
     padding: 10px 0;
@@ -41,7 +39,6 @@ header h1[b-3313gijnte] {
         color: #e44d26;
     }
 
-/* Seçenekler (Category Dropdown) */
 select[b-3313gijnte] {
     padding: 12px;
     margin: 0 10px;
@@ -52,12 +49,10 @@ select[b-3313gijnte] {
     font-size: 16px;
 }
 
-/* Ana İçerik Stili */
 .container[b-3313gijnte] {
     margin-top: 30px;
 }
 
-/* Footer Stili */
 .footer[b-3313gijnte] {
     position: relative;
     text-align: center;
@@ -78,7 +73,6 @@ select[b-3313gijnte] {
             color: #fff;
         }
 
-    /* Admin ve Cart Butonları Stili */
     .footer .btn[b-3313gijnte] {
         margin: 10px;
     }
@@ -97,35 +91,33 @@ select[b-3313gijnte] {
         border-color: #e44d26;
     }
 
-/* Cart Button Hover Stili */
 .cart-button:hover .cart-icon[b-3313gijnte] {
-    stroke: #e44d26; /* İmleç üzerine gelindiğinde simge rengi */
+    stroke: #e44d26;
 }
 
 .cart-button:hover[b-3313gijnte] {
-    color: #e44d26; /* İmleç üzerine gelindiğinde yazı rengi */
+    color: #e44d26;
 }
 
-/* site.css veya başka bir stil dosyasında */
 .cart-button[b-3313gijnte] {
     display: flex;
     align-items: center;
-    padding: 10px; /* Buton içeriğine biraz boşluk ekler */
-    width: fit-content; /* Butonun içeriğine göre genişliği ayarlar */
+    padding: 10px; 
+    width: fit-content;
 }
 
 .cart-icon[b-3313gijnte] {
-    margin-right: 5px; /* İsteğe bağlı: İkon ile metin arasına boşluk ekler */
-    filter: invert(100%); /* Simgenin rengini tamamen tersine çevirir (beyaz yapar) */
+    margin-right: 5px; 
+    filter: invert(100%);
 }
 
 .cart-text[b-3313gijnte] {
-    color: #fff; /* Metin rengini beyaz yapar */
-    font-size: 1.2em; /* İsteğe bağlı: Metin boyutunu ayarlar */
+    color: #fff; 
+    font-size: 1.2em;
 }
 
 .btn-outline-primary[b-3313gijnte] {
-    color: #fff; /* Buton metin rengini beyaz yapar */
-    background-color: #007bff; /* Buton arkaplan rengini ayarlar */
-    border-color: #007bff; /* Buton kenarlık rengini ayarlar */
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
 }

@@ -27,6 +27,20 @@ namespace ShoppingApp.Controllers
             ViewBag.productTypeList = _repository.Types.ToList();
             return View();
         }
+        [HttpGet]
+        public IActionResult Order()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Order(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Home");
+            }
+            return View(model: customer);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
